@@ -1,33 +1,51 @@
 // text
 .text
   position: absolute
-  top: 200px
-  left: 100px
+  top: 160px
+  left: 70px
   transform: rotate(-90deg)
   h1 
-    font-size: 120px
-    text-transform: uppercase
+    font-size: 105px
     font-weight: 900
-    letter-spacing: -10px
-    &:after
-      content: "duality"
-      position: absolute
-      top: 40px
-      left: -80px
-      color: $yellow
-      z-index: -1
-      font-size: 150px
-      font-weight: 600
-      letter-spacing: 8px
-      
-  h3 
-    font-size: 40px
+    left: 94px
     text-transform: uppercase
+    letter-spacing: -8px
+    position: relative
+    overflow: hidden
+    height: 150px
+    width: 600px
+    margin-bottom: 20px
+    > .hidetext
+      position: absolute
+  h2
+    position: absolute
+    top: 30px
+    color: $yellow
+    z-index: -1
+    font-size: 105px
     font-weight: 600
+    letter-spacing: 8px
+    text-transform: uppercase
+  h3 
+    font-size: 30px
+    text-transform: uppercase
+    font-weight: 500
     line-height: 1
+    position: relative
+    overflow: hidden
+    height: 80px
+    left: 94px
+    > .hidetext
+      position: absolute
   p 
     width: 200px
     font-size: 12px
     margin-top: 30px
     font-weight: 500
+    position: relative
+    overflow: hidden
+    height: 110px
+    left: 94px
+    > .hidetext
+      position: absolute
 // text END
