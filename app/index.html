@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Tony&Guy</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<!-- Template Basic Images End -->
+
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- overlay -->
+		<div class="overlay first"></div>
+		<div class="overlay second"></div>
+		<div class="overlay third"></div>
+		<!-- overlay END -->
+		<!-- navbar -->
+		<nav class="navbar">
+			<div class="menu">
+				<i class="menu-icon"><img class="menu-img" src="libs/ionicons/menu.svg"></i>
+			</div>
+			<div class="lang">eng</div>
+			<div class="search">
+				<i class="search-icon"><img class="search-img" src="libs/ionicons/search.svg"></i>
+			</div>
+		</nav>
+		<!-- navbar END -->
+		<!-- social media -->
+		<div class="media">
+			<ul>
+				<li>facebook</li>
+				<li>instagram</li>
+				<li>twitter</li>
+			</ul>
+		</div>
+		<!-- social media END-->
+		<!-- text -->
+		<div class="text">
+			<h1>
+				<span class="hidetext">toni&guy</span>
+			</h1>
+			<h2>duality</h2>
+			<h3>
+				<span class="hidetext">collection 2017</br>duality</span>
+			</h3>
+			<p>
+				<span class="hidetext">Lorem ipsum dolor sit amet consectetur Voluptate laborum </br>adipisicing consectetur cumque c elit. Voluptate laborum</br> cumque consectetur soluta 
+					possimus</span>
+			</p>
+		</div>
+		<!-- text END -->
+		<!-- sponsor -->
+		<div class="sponsor">
+			<img src="./img/sponsor-logo.png" alt="Logo">
+			<p>official sponsor</p>
+		</div>
+		<!-- sponsor END -->
+		<!-- distortion -->
+		<div class="distortion"></div>
+		<!-- distortion END -->
+	</div>
+	
+
+	<!-- Optimized loading JS Start -->
+	<script>let scr = {"scripts":[
+		{"src" : "js/libs.min.js", "async" : false},
+		{"src" : "js/common.js", "async" : false}
+		]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
+	</script>
+	<!-- Optimized loading JS End -->
+
+
+	<!-- gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+    integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+  <!-- three js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"
+    integrity="sha256-3mBEX8I0uMLF7+AUjJeTCelosuorzYpqwBMBPDTyQqY=" crossorigin="anonymous"></script>
+  <!-- hover-effect js -->
+	<script src="./js/hover-effect.umd.js"></script>
+
+	<script>
+		new hoverEffect({
+			parent: document.querySelector('.distortion'),
+			intensity: 0.2,
+			image1: './img/oscar.png',
+			image2: './img/5.png',
+			displacementImage: './img/diss.png',
+			imagesRatio: 380 / 300 
+		})
+
+		// navbar
+		TweenMax.staggerFrom(".navbar div", 1.5, {
+			delay: 1.5,
+			opacity: 0,
+			y: "20",
+			ease: Expo.easeInOut
+		}, 0.08);
+
+		// media
+		TweenMax.staggerFrom(".media ul li", 1.5, {
+			delay: 1.5,
+			opacity: 0,
+			x: "-20",
+			ease: Expo.easeInOut
+		}, 0.08);
+		
+		// text
+		TweenMax.from(".text h1 .hidetext", 1.5, {
+			delay: 1,
+			y: "100%",
+			ease: Expo.easeInOut
+		});
+		
+		TweenMax.from(".text h3 .hidetext", 1.5, {
+			delay: 1.2,
+			y: "200%",
+			ease: Expo.easeInOut
+		});
+
+		TweenMax.from(".text p .hidetext", 1.5, {
+			delay: 1.3,
+			y: "100%",
+			ease: Expo.easeInOut
+		});
+
+		TweenMax.from("h2", 1.5, {
+			delay: 1.5,
+			opacity: 0,
+			x: "-1000",
+			ease: Expo.easeInOut
+		});
+
+		// sponsor
+		TweenMax.from(".sponsor img", 1.5, {
+			delay: 1.5,
+			opacity: 0,
+			y: "20",
+			ease: Expo.easeInOut
+		});
+
+		TweenMax.from(".sponsor p", 1.5, {
+			delay: 1.6,
+			opacity: 0,
+			y: "20",
+			ease: Expo.easeInOut
+		});
+		
+		// distortion
+		TweenMax.from(".distortion", 1.5, {
+			delay: 2,
+			opacity: 0,
+			y: "20",
+			ease: Expo.easeInOut
+		});
+
+		// overlay
+		TweenMax.to(".first", 1.5, {
+			delay: .5,
+			top: "-100%",
+			ease: Expo.easeInOut
+		});
+
+		TweenMax.to(".second", 1.5, {
+			delay: .7,
+			top: "-100%",
+			ease: Expo.easeInOut
+		});
+
+		TweenMax.to(".third", 1.5, {
+			delay: .9,
+			top: "-100%",
+			ease: Expo.easeInOut
+		});
+
+	</script>
+</body>
+</html>
